@@ -1,0 +1,38 @@
+{
+  "name": "DoubanFM Companion",
+  "description": "Synchrinize track to my own database.",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "background",
+    "tabs",
+    "webRequest", "webRequestBlocking",
+    "http://*/dial/track/*",
+    "http://*.douban.com/*",
+    "https://*.douban.com/*",
+    "http://douban.fm/*"
+  ],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://douban.fm/*"
+      ],
+      "js" : ["jquery.min.js" , "content.js"]
+    }
+  ],
+
+
+"background": {
+    "scripts": ["jquery.min.js" , "background.js"]
+  },
+
+ "options_page": "option.html",
+
+  "manifest_version": 2
+}
