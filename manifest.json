@@ -3,17 +3,7 @@
   "description": "Synchrinize track to my own database.",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "storage",
-    "background",
-    "tabs",
-    "webRequest", "webRequestBlocking",
-    "http://*/dial/track/*",
-    "http://*.douban.com/*",
-    "https://*.douban.com/*",
-    "http://douban.fm/*"
-  ],
+  "permissions": [ "activeTab", "storage", "cookies", "background", "tabs", "webRequest", "webRequestBlocking", "http://*/dial/track/*", "http://*.douban.com/*", "https://*.douban.com/*", "http://douban.fm/*" ],
   "icons": { "16": "icon16.png",
            "48": "icon48.png",
           "128": "icon128.png" },
