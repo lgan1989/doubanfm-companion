@@ -1,4 +1,3 @@
-
 localStorage['host'] = "ganlu.name/me";
 
 localStorage['cookie'] = '';
@@ -29,7 +28,6 @@ chrome.runtime.onMessage.addListener(
             success: function(data) {
                 data['track'] = trackInfo;
                 data['cookie'] = localStorage['cookie'];
-                data['ck'] = localStorage['ck'];
                 var jsonStr = JSON.stringify(data);
                 var requestStr = 'data=' +  $.param(data) ;   
                 var xhr = new XMLHttpRequest(); 
@@ -80,10 +78,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             if (cookie && cookie.value)
                 localStorage['cookie'] = cookie.value;
         }); 
-        chrome.cookies.get({url : 'http://douban.fm' , name : 'ck'} , function(cookie){
-            if (cookie && cookie.value)
-                localStorage['ck'] = cookie.value;
-        }); 
     }
     if (info.url.match(regexMP3link) != null){
 
@@ -128,5 +122,3 @@ chrome.webRequest.onBeforeRequest.addListener(
   ["blocking" , "requestBody"]
   
 );           
-
-
