@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener(
 });
 
 
-var originJS = /http\:\/\/img3\.douban\.com\/js\/fm\/packed_fm_player[\d]+.js/;
+var originJS = /http\:\/\/img3\.douban\.com\/f\/fm\/[0-9a-z]*\/js\/fm\/fm_player.js/; 
 var originShareJS = /http\:\/\/img3\.douban\.com\/js\/fm\/packed_fm_share[\d]+.js/; 
 
 var statusPost = /http\:\/\/douban\.fm\/j\/mine\/playlist\?type=([a-z])&sid=([\d]+)[\s\S]*/
